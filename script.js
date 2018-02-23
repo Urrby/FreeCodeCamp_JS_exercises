@@ -809,3 +809,28 @@ console.log(myReplace("This has a spellngi error", "spellngi", "spelling"));
 console.log(myReplace("His name is Tom", "Tom", "john"));
 */
 
+function myReplace(str, before, after) {
+	let beforeWord = str.indexOf(before); //Najdemo položaj začetne črke v "before" besedi
+	if(str[beforeWord] === str[beforeWord].toUpperCase()) {
+		after = after.charAt(0).toUpperCase() + after.slice(1);
+		str = str.replace(before, after);
+
+	} else {
+		str = str.replace(before, after);
+
+	}
+	return str;
+}
+
+function myReplace(str, before, after) {
+	let beforeWord = str.indexOf(before); //Najdemo položaj začetne črke v "before" besedi
+	if(str[beforeWord] === str[beforeWord].toUpperCase()) {
+		after = after.charAt(0).toUpperCase() + after.slice(1);
+		str = str.replace(before, after);
+
+	} else {
+		str = str.replace(before, after);
+
+	}
+	return str;
+}
