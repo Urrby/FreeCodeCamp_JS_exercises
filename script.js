@@ -809,3 +809,41 @@ console.log(myReplace("This has a spellngi error", "spellngi", "spelling"));
 console.log(myReplace("His name is Tom", "Tom", "john"));
 */
 
+// Missing letter
+/*
+Find the missing letter in the passed letter range and return it.
+If all letters are present in the range, return undefined.
+*/
+
+function fearNotLetter (str) {
+	let alphabet = [];
+	let strArr = str.split("");
+	for(i =  97; i < 122; i++) {
+		alphabet.push(String.fromCharCode(i));
+	}
+
+	let position = alphabet.indexOf(strArr[0]);
+	for (j = 0; j < alphabet.length; j++) {
+
+		if (strArr[j] === alphabet[position]) {
+
+		} else {
+			return false;
+		}
+	}
+}
+
+//console.log(fearNotLetter("abce"));
+//console.log(fearNotLetter("abcdefghjklmno"));
+console.log(fearNotLetter("bce")); // d
+console.log(fearNotLetter("bcd")); // undefined
+console.log(fearNotLetter("yz"));
+
+/*
+let arr = ["a", "b", "c", "d"];
+let b = ["c", "d"];
+for(i = 0; i < arr.length; i++) {
+	if()
+}
+let pos = arr.indexOf(b);
+console.log(pos);*/
