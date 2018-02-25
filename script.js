@@ -815,29 +815,37 @@ Find the missing letter in the passed letter range and return it.
 If all letters are present in the range, return undefined.
 */
 
+/*
 function fearNotLetter (str) {
-	let alphabet = [];
-	let strArr = str.split("");
-	for(i =  97; i < 122; i++) {
-		alphabet.push(String.fromCharCode(i));
-	}
-
-	let position = alphabet.indexOf(strArr[0]);
-	for (j = 0; j < alphabet.length; j++) {
-
-		if (strArr[j] === alphabet[position]) {
-
-		} else {
-			return false;
-		}
-	}
+    let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    let start = alphabet.indexOf(str[0]);
+    let len = str.length;
+    for(i = start; i < start + len; i++){
+       if (!str.includes(alphabet[i])) {
+           return alphabet[i];
+       } 
+    }
+    return undefined;
 }
+*/
+
+function fearNotLetter (str) {
+    for(i = 0; i < str.length; i++) {
+        let code = str.charCodeAt(i);
+        
+        if(code !== str.charCodeAt(0) + i) {
+            return String.fromCharCode(code -1)
+        }
+    }
+    return undefined;
+}
+
 
 //console.log(fearNotLetter("abce"));
 //console.log(fearNotLetter("abcdefghjklmno"));
-console.log(fearNotLetter("bce")); // d
-console.log(fearNotLetter("bcd")); // undefined
-console.log(fearNotLetter("yz"));
+console.log(fearNotLetter("bce")); 
+console.log(fearNotLetter("bcd")); 
+//console.log(fearNotLetter("yz"));
 
 /*
 let arr = ["a", "b", "c", "d"];
@@ -847,3 +855,36 @@ for(i = 0; i < arr.length; i++) {
 }
 let pos = arr.indexOf(b);
 console.log(pos);*/
+
+
+// 5. Write a function that returns a function that returns a one more than the
+// number that was passed in to the first function, but increases by one each 
+// time it is called, i.e.,
+// var fn = Q5(7);
+// fn() //returns 8.
+// fn() //returns 9.
+/*
+function a (num) {
+    let counter = 0;
+    return function b (){
+        counter++;
+        return num + counter;
+    }
+}
+
+let fn = a(7);
+console.log(fn()); // 8
+console.log(fn()); // 9
+console.log(fn()); // 10
+*/
+
+// 6. Write a function that returns a new number each time it is called, i.e., 
+// var fn = Q6; 
+// fn() //returns 1.
+// fn() //returns 2.
+// fn() //returns 3.
+// HINT: IIFE
+
+
+
+
