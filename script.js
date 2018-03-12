@@ -818,7 +818,7 @@ Return the provided character as the first element in each array.
 For example, for the input GCG, return [["G", "C"], ["C","G"],["G", "C"]]
 The character and its pair are paired up in an array, and all the arrays are grouped into one encapsulating array.
 */
-/*
+
 // with for
 function pairElement(str) {
 	let strArr = str.split("");
@@ -859,7 +859,6 @@ function pairElement(str) {
 
 console.log(pairElement("GCG"));
 console.log(pairElement("ATCGA")); // [["A","T"],["T","A"],["C","G"],["G","C"],["A","T"]]
-*/
 
 
 
