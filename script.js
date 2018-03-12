@@ -557,6 +557,7 @@ function fearNotLetter (str) {
     }
     return undefined;
 }
+<<<<<<< HEAD
 
 console.log(fearNotLetter("abce"));
 console.log(fearNotLetter("abcdefghjklmno"));
@@ -778,6 +779,27 @@ function translatePigLatin(str) {
 
 }
 
+=======
+*/
+
+function fearNotLetter (str) {
+    for(i = 0; i < str.length; i++) {
+        let code = str.charCodeAt(i);
+        
+        if(code !== str.charCodeAt(0) + i) {
+            return String.fromCharCode(code -1)
+        }
+    }
+    return undefined;
+}
+
+
+//console.log(fearNotLetter("abce"));
+//console.log(fearNotLetter("abcdefghjklmno"));
+console.log(fearNotLetter("bce")); 
+console.log(fearNotLetter("bcd")); 
+//console.log(fearNotLetter("yz"));
+>>>>>>> dbd56f43c319e0a0c25fe8f610f10c658843e8cf
 
 console.log(translatePigLatin("algorithm")); // algorithmway
 console.log(translatePigLatin("eight")); // eightway
@@ -835,11 +857,45 @@ function pairElement(str) {
 	return strArr;
 	
 }
+<<<<<<< HEAD
 
 console.log(pairElement("GCG"));
 console.log(pairElement("ATCGA")); // [["A","T"],["T","A"],["C","G"],["G","C"],["A","T"]]
 */
 
+=======
+let pos = arr.indexOf(b);
+console.log(pos);*/
+
+
+// 5. Write a function that returns a function that returns a one more than the
+// number that was passed in to the first function, but increases by one each 
+// time it is called, i.e.,
+// var fn = Q5(7);
+// fn() //returns 8.
+// fn() //returns 9.
+/*
+function a (num) {
+    let counter = 0;
+    return function b (){
+        counter++;
+        return num + counter;
+    }
+}
+
+let fn = a(7);
+console.log(fn()); // 8
+console.log(fn()); // 9
+console.log(fn()); // 10
+*/
+
+// 6. Write a function that returns a new number each time it is called, i.e., 
+// var fn = Q6; 
+// fn() //returns 1.
+// fn() //returns 2.
+// fn() //returns 3.
+// HINT: IIFE
+>>>>>>> dbd56f43c319e0a0c25fe8f610f10c658843e8cf
 
 
 
